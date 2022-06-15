@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seo tegs -->
+    <meta name="description" content="timer">
+    <meta name="keywords" content="timer">
+    <meta name="author" content="susha12">
+    <title>timer</title>
+    <!-- import css styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    /* background-color: #000608; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* форма отправки */
+
+.box_Contact{
+    height: 400px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(40px);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid red;
+    display: none;
+}
+
+.box_Contact__content{
+    max-height: 307px;
+    width: 736px;
+    margin: 0 20px;
+}
+.writhe_contents{
+    margin: 0 20px;
+}
+.box_Contact__title{
+    height: 61px;
+    width: 442px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 61px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+}
+.box_Contact__text{
+    height: 78px;
+    width: 578px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+    margin: 10px 0 35px;
+}
+.box_Contact__inputs{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.inputs>form{
+    width: 356px;
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#fname{
+    height: 44px;
+    width: 356px;
+    left: 95px;
+    top: 333px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+    padding: 7px 14px;
+    border: none;
+}
+#lname{
+    height: 44px;
+    width: 356px;
+    left: 95px;
+    top: 333px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(43, 43, 43, 1);
+    padding: 7px 14px;
+    border: none;
+}
+.btn_send{
+    height: 44px;
+    width: 261px;
+    border-radius: 10px;
+    background: rgba(203, 57, 57, 1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border: none;
+}
+
+.send_contents{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.send_content__title{
+    height: 61px;
+    width: 90%;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 61px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(43, 43, 43, 1);
+}
+.send_content_text{
+    height: 39px;
+    width: 90%;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(43, 43, 43, 1);
+    margin: 20px 0 35px;
+
+}
+.send_content_btnHome{
+    height: 44px;
+    width: 261px;
+    border-radius: 10px;
+    border: 2px solid rgba(203, 57, 57, 1);
+    min-height: 22px;
+    min-width: 216px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(203, 57, 57, 1);
+    cursor: pointer;
+}
+@media only screen and (max-width: 802px) {
+
+/* форма отправки */
+
+.box_Contact{
+    height: 448px;
+    max-width: 390px;
+    min-width: 390px;
+    width: 100%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(40px);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.box_Contact__content{
+    min-height: 307px;
+    width: 100%;
+    margin: 0 10px;
+}
+.writhe_contents{
+    margin: 0;
+}
+.box_Contact__title{
+    height: 31px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 31px;
+    text-align: center;
+}
+.box_Contact__text{
+    height: 68px;
+    width: 90%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(43, 43, 43, 1);
+    margin: 10px auto 25px;
+}
+.box_Contact__inputs{
+    display: flex;
+
+    justify-content: start;
+    position: relative;
+    height: 173px;
+    margin: 0 29px;
+}
+
+.inputs>form{
+    width: 100%;
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#fname{
+    height: 40px;
+    width: 306px;
+    font-size: 14px;
+    font-weight: 400;
+}
+#lname{
+    height: 40px;
+    width: 306px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.btn_send{
+    height: 40px;
+    width: 201px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    right: 60px;
+    bottom: 0px;
+}
+
+.send_contents{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.send_content__title{
+    height: 51px;
+    width: 95%;
+    font-size: 30px;
+    font-weight: 600;
+}
+.send_content_text{
+    height: 69px;
+    width: 90%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin: 20px 0 25px;
+}
+.send_content_btnHome{
+    height: 40px;
+    width: 201px;
+    font-size: 14px;
+    font-weight: 500;
+}
+}
+
+
+.seconds{
+    width: 120px;
+    height: 100px;
+    border: 1px solid white;
+    color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 600;
+
+}
+
+    </style>
+</head>
+
+<body>
+        <div class="seconds">5</div>
+        <!-- форма отправки -->
+            <div class="box_Contact">
+                <div class="box_Contact__content">
+                    <div class="writhe_contents">
+                        <div class="box_Contact__title">Оставьте заявку</div>
+                            <p class="box_Contact__text">Наши менеджеры свяжутся
+                                с Вами в ближайшее время</p>
+                            <div class="box_Contact__inputs">
+                                <div class="inputs">
+                                    <form action="#">
+                                        <input  id="lname" type="tel" name="tel" placeholder="Номер телефона"  required>
+                                        <input  id="fname" type="email" name="emails" placeholder="email addresses" multiple  required>
+                                        <input type ="submit" class="btn_send" value="Связаться">
+                                    </form> 
+                                </div>
+                               
+
+
+                            </div>
+                    </div>
+                    <div class="send_contents">
+                        <h2 class="send_content__title">Поздравляем!</h2>
+                        <p class="send_content_text">Ваша заявка успешно отправлена</p>
+                        <div class="send_content_btnHome">Вернуться на главную</div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+    <script>
+        // форма отправки
+
+window.addEventListener("DOMContentLoaded", function() {
+    [].forEach.call( document.querySelectorAll('#lname'), function(input) {
+    var keyCode;
+    function mask(event) {
+        event.keyCode && (keyCode = event.keyCode);
+        var pos = this.selectionStart;
+        if (pos < 3) event.preventDefault();
+        var matrix = "+7 (___) ___-__-__",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, ""),
+            new_value = matrix.replace(/[_\d]/g, function(a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+            });
+        i = new_value.indexOf("_");
+        if (i != -1) {
+            i < 5 && (i = 3);
+            new_value = new_value.slice(0, i)
+        }
+        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+            function(a) {
+                return "\\d{1," + a.length + "}"
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+        if (event.type == "blur" && this.value.length < 5)  this.value = ""
+    }
+
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false)
+
+  });
+
+});
+const boxContact = document.querySelector(".box_Contact");
+const seconds = document.querySelector(".seconds");
+window.onload = function() {
+    setTimeout(second, 1000); 
+    setTimeout(second, 2000); 
+    setTimeout(second, 3000); 
+    setTimeout(second, 4000); 
+    setTimeout(second, 5000); 
+    setTimeout(flex, 6000); 
+ };
+ let number = 4;
+ function second (){
+
+    seconds.innerHTML = number;
+    number--;
+    if(number == -1 ){
+        seconds.innerHTML = "start";
+    }
+
+ }
+function flex (){
+    console.log("yes")
+    boxContact.style.display = "flex";
+    seconds.style.display = "none";
+}
+    </script>
+</body>
+
+</html>
